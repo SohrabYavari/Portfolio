@@ -5,19 +5,17 @@ const More = () => {
     <>
       <div>
         <CardComp title="Who Is Sohrab?" header="MORE ON ME" description="">
-          <div className="px-2">
+          <div className="px-2 flex flex-col gap-2">
             <h1 className="text-2xl py-1 font-semibold">What I like to do?</h1>
-            <p className="md:px-4">Majority of my time is spent either learning programming or gaming.</p>
+            <p className="md:px-4">I really like programming so in my spare time I work on an indie game with one of my friends using Godot and C#.</p>
 
-            <h1 className="text-2xl py-1 font-semibold">Next Projects?</h1>
+            <h1 className="text-2xl py-1 font-semibold">Progression?</h1>
             <p className="md:px-4">
-              I am working on making a notes app to the likes of obsidian using
-              C. Which will teach me the opitome of how computers work and
-              operate.{" "}
+              I am expanding my skills by learning staticly typed compiled languages such as C# and Java. 
               <br />
-              <span className="opacity-50">
-                ( making me a computer wizard )
-              </span>
+              <br />
+              I am creating a bakery app using Java for the backend and Flutter for the frontend. This is a personal project of mine that will take a lot of my time and patience to perfect.
+              <br />
             </p>
 
             <p>

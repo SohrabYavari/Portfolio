@@ -3,10 +3,18 @@ import ProjectCard from "../global/ProjectCard";
 import Jane from "../../assets/jane.jpg";
 import InvestIQ from "../../assets/InvestIQ.jpg";
 import Solar from "../../assets/Solar.jpg";
+import NcNews from "../../assets/nc-news.png";
 import TechBadge from "../global/TechBadge";
 
 import { FaReact } from "react-icons/fa";
-import { SiTypescript } from "react-icons/si";
+import {
+  SiAxios,
+  SiExpress,
+  SiJavascript,
+  SiJest,
+  SiPostgresql,
+  SiTypescript,
+} from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiDaisyui } from "react-icons/si";
@@ -20,8 +28,45 @@ const Projects = () => {
         header="Projects"
         title="Finished Projects"
         description="A showcase on the different projects that I have worked on."
-        >
+      >
         <div className="flex flex-col gap-2">
+          <ProjectCard
+            image={NcNews}
+            webLink="https://SohrabYavari.github.io/nc-news/"
+            gitLink="https://github.com/SohrabYavari/nc-news"
+            title="NC News"
+            description="A full-stack CRUD JS app which allows for people to view articles"
+            techStack={
+              <>
+                <TechBadge icon={<FaReact />} name="React" />
+                <TechBadge icon={<RiTailwindCssFill />} name="TailWindCSS" />
+                <TechBadge icon={<SiDaisyui />} name="DasiyUi" />
+                <TechBadge icon={<SiAxios />} name="Axios" />
+                <TechBadge icon={<SiJavascript />} name="JavaScript" />
+                <TechBadge icon={<SiExpress />} name="ExpressJs" />
+                <TechBadge icon={<SiPostgresql />} name="Postgresql" />
+                <TechBadge icon={<SiJest />} name="Jest" />
+              </>
+            }
+          />
+
+          <ProjectCard
+            image={InvestIQ}
+            webLink="https://SohrabYavari.github.io/InvestIQ/"
+            gitLink="https://github.com/SohrabYavari/InvestIQ"
+            title="InvestIQ"
+            description="Data visulaisation through Financial Modeling Preps API with Axios"
+            techStack={
+              <>
+                <TechBadge icon={<FaReact />} name="React" />
+                <TechBadge icon={<SiTypescript />} name="TypeScript" />
+                <TechBadge icon={<RiTailwindCssFill />} name="TailWindCSS" />
+                <TechBadge icon={<SiAxios />} name="Axios" />
+                <TechBadge icon={<SiDaisyui />} name="DaisyUI" />
+              </>
+            }
+          />
+
           <ProjectCard
             image={Jane}
             webLink="https://SohrabYavari.github.io/janes-photography/"
@@ -36,23 +81,7 @@ const Projects = () => {
                 <TechBadge icon={<SiShadcnui />} name="ShadcnUI" />
               </>
             }
-            />
-
-          <ProjectCard
-            image={InvestIQ}
-            webLink="https://SohrabYavari.github.io/InvestIQ/"
-            gitLink="https://github.com/SohrabYavari/InvestIQ"
-            title="InvestIQ"
-            description="This uses axios to utilise REST apis to get real-time stock prices for NASDAQ companies."
-            techStack={
-              <>
-                <TechBadge icon={<FaReact />} name="React" />
-                <TechBadge icon={<SiTypescript />} name="TypeScript" />
-                <TechBadge icon={<RiTailwindCssFill />} name="TailWindCSS" />
-                <TechBadge icon={<SiDaisyui />} name="DaisyUI" />
-              </>
-            }
-            />
+          />
 
           <ProjectCard
             image={Solar}
@@ -67,7 +96,7 @@ const Projects = () => {
                 <TechBadge icon={<SiMui />} name="MaterialUI" />
               </>
             }
-            />
+          />
         </div>
       </CardComp>
     </>

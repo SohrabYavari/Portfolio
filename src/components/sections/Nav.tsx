@@ -26,25 +26,27 @@ const Nav = () => {
     };
   }, []);
 
+  const navBaseClasses = "fixed z-50 transition-all duration-300 ease-in-out";
+  const smallScreenPosition = isScrolled
+    ? "top-2 opacity-90"
+    : "top-[6.5rem] opacity-100";
+  const largeScreenPosition = isScrolled ? "top-2" : "top-[8.25rem]";
+
   return (
-    <>
-      <div className="relative">
+    <div className="relative">
+      <div
+        className={`${
+          isSmallScreen
+            ? `${navBaseClasses} left-8 right-8 ${smallScreenPosition}`
+            : `${navBaseClasses} side-bar ${largeScreenPosition}`
+        }`}
+      >
         <div
           className={`${
-            isSmallScreen
-              ? `fixed top-25 left-8 right-8 z-50 transition-all duration-300 ${
-                  isScrolled ? "top-2 opacity-90" : ""
-                }`
-              : `fixed side-bar ${
-                  isScrolled ? "top-2" : ""}`
-          }`}
+            isSmallScreen ? "container mx-auto p-4" : "p-5 w-full"
+          } bg-primary rounded-md`}
         >
-          <div
-            className={`${
-              isSmallScreen ? "container mx-auto p-4" : "p-5 w-full"
-            } bg-primary rounded-md`}
-          >
-            <nav>
+          <nav>
             <ul
               className={`uppercase tracking-tight font-semibold ${
                 isSmallScreen
@@ -52,101 +54,16 @@ const Nav = () => {
                   : "flex flex-col gap-5"
               }`}
             >
-              <NavItem
-                link="about-me"
-                name={isSmallScreen ? "a" : "about me"}
-              />
-              <NavItem
-                link="projects"
-                name={isSmallScreen ? "p" : "projects"}
-              />
-              <NavItem
-                link="more-on-me"
-                name={isSmallScreen ? "m" : "more on me"}
-              />
+              <NavItem link="about-me" name={isSmallScreen ? "a" : "about me"} />
+              <NavItem link="projects" name={isSmallScreen ? "p" : "projects"} />
+              <NavItem link="more-on-me" name={isSmallScreen ? "m" : "more on me"} />
               <NavItem link="resume" name={isSmallScreen ? "r" : "resume"} />
-            </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
 
-      {/* <div className="relative">
-        <div
-          className={`bg-primary container h-auto p-5 z-50 rounded-md ${
-            isSmallScreen
-              ? "fixed top-25 left-0 right-0 w-4/5"
-              : "fixed top-25 left-0 right-0"
-          } ${
-            isScrolled
-              ? "fixed top-2 left-0 right-0 w-full duration-300 ease-in-out opacity-85"
-              : "fixed top-25 left-0 right-0"
-          }`}
-        >
-          <nav className={isSmallScreen ? "" : ""}>
-            <ul
-              className={`uppercase tracking-tight font-semibold ${
-                isSmallScreen
-                  ? "flex gap-5 justify-center"
-                  : "flex flex-col gap-5"
-              }`}
-            >
-              <NavItem
-                link="about-me"
-                name={isSmallScreen ? "a" : "about me"}
-              />
-              <NavItem
-                link="projects"
-                name={isSmallScreen ? "p" : "projects"}
-              />
-              <NavItem link="resume" name={isSmallScreen ? "r" : "resume"} />
-              <NavItem
-                link="more-on-me"
-                name={isSmallScreen ? "m" : "more on me"}
-              />
-              <NavItem link="contact" name={isSmallScreen ? "c" : "contact"} />
             </ul>
           </nav>
         </div>
-      </div> */}
-
-
-
-
-
-
-
-
-      {/* {isSmallScreen ? (
-        <div className="relative">
-          <div className="bg-primary w-full h-auto p-5 rounded-xl sticky top-0 z-50">
-            <nav>
-              <ul className="uppercase tracking-tight font-semibold flex gap-5 justify-center">
-                <NavItem link="about-me" name="a" />
-                <NavItem link="projects" name="p" />
-                <NavItem link="resume" name="r" />
-                <NavItem link="more-on-me" name="m" />
-                <NavItem link="contact" name="c" />
-              </ul>
-            </nav>
-          </div>
-        </div>
-      ) : (
-        <div className="relative">
-          <div className="bg-primary w-full h-auto p-5 rounded-xl sticky top-0 z-50">
-            <nav className="pr-20">
-              <ul className="uppercase tracking-tight font-semibold flex flex-col gap-5">
-                <NavItem link="about-me" name="about me" />
-                <NavItem link="projects" name="projects" />
-                <NavItem link="resume" name="resume" />
-                <NavItem link="more-on-me" name="more on me" />
-                <NavItem link="contact" name="contact" />
-              </ul>
-            </nav>
-          </div>
-        </div>
-      )} */}
-    </>
+      </div>
+    </div>
   );
 };
 
@@ -157,20 +74,18 @@ interface NavProps {
 
 const NavItem = ({ link, name }: NavProps) => {
   return (
-    <>
-      <li className="text-secondary cursor-pointer">
-        <Link
-          to={link}
-          spy={true}
-          smooth={true}
-          offset={-10}
-          duration={500}
-          onClick={scrollToTop}
-        >
-          {name}
-        </Link>
-      </li>
-    </>
+    <li className="text-secondary cursor-pointer">
+      <Link
+        to={link}
+        spy={true}
+        smooth={true}
+        offset={-10}
+        duration={500}
+        onClick={scrollToTop}
+      >
+        {name}
+      </Link>
+    </li>
   );
 };
 

@@ -20,7 +20,7 @@ const CardComp: React.FC<Props> = ({
     <>
       <Card className="bg-secondary">
         <CardHeader>
-            <img src={image} className="rounded-full w-2/3" />
+            <img src={image} className="rounded-full md:w-2/3 w-full" />
           <div className="relative px-2">
             <p className="absolute text-xl bottom-0 uppercase">// {header}</p>
             <p className="text-stroke uppercase font-bold text-5xl opacity-50">{header}</p>
