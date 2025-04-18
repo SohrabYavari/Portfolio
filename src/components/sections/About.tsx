@@ -1,7 +1,7 @@
 import CardComp from "../global/CardComp";
 import profileImage from "../../assets/Me.jpg";
 import TechBadge from "../global/TechBadge";
-import { FaAws, FaDocker, FaJava, FaReact } from "react-icons/fa";
+import { FaJava, FaReact } from "react-icons/fa";
 import { SiExpress, SiGnubash, SiJest, SiPostgresql, SiTypescript } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io";
 import { SiCsharp } from "react-icons/si";
@@ -33,8 +33,6 @@ const About = () => {
           <TechBadge icon={<SiJest />} name="Jest" />
           <TechBadge icon={<SiExpress />} name="ExpressJs" />
           <TechBadge icon={<SiGnubash />} name="Bash Scripting" />
-          <TechBadge icon={<FaAws />} name="AWS Lambda" />
-          <TechBadge icon={<FaDocker />} name="Docker" />
         </div>
         <div className="px-2 pt-8">
           <h1>UI Libraries:</h1>
