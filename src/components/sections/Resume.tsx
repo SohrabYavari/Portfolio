@@ -1,4 +1,4 @@
-import MyResume from "../../assets/SohrabYavari.pdf";
+import MyResume from "../../assets/Sohrab-Yavari-CV.pdf";
 import CardComp from "../global/CardComp";
 
 const Resume = () => {
@@ -12,7 +12,7 @@ const Resume = () => {
         {/* Large screen: show embedded PDF */}
         <div className="hidden md:block">
           <embed
-            src={MyResume}
+            src={`${MyResume}#toolbar=0&navpanes=0&scrollbar=0`}
             className="mx-auto w-full h-screen rounded-md"
             type="application/pdf"
           />

@@ -36,7 +36,7 @@ const ProjectCard: React.FC<Props> = ({
         <CardHeader className="p-2">
           <img
             src={image}
-            className="rounded-md md:w-[350px] w-[200px] h-[200px] object-cover"
+            className="rounded-md md:w-[350px] w-[300px] h-[200px] object-cover"
           />
         </CardHeader>
         <div>
