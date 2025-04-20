@@ -2,7 +2,17 @@ import CardComp from "../global/CardComp";
 import profileImage from "../../assets/Me.jpg";
 import TechBadge from "../global/TechBadge";
 import { FaJava, FaReact } from "react-icons/fa";
-import { SiExpress, SiGnubash, SiJest, SiPostgresql, SiTypescript } from "react-icons/si";
+import {
+  SiExpress,
+  SiFastify,
+  SiGnubash,
+  SiHeroku,
+  SiJest,
+  SiPostgresql,
+  SiRender,
+  SiSupabase,
+  SiTypescript,
+} from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io";
 import { SiCsharp } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
@@ -16,25 +26,43 @@ const About = () => {
       <CardComp
         image={profileImage}
         title="Full Stack Developer"
-        description="Self taught programmer, forever a student, "
+        description="Self taught programmer, forever a student"
         header="About Me"
       >
         <div className="px-2">
-          <h1>Languages & FrameWorks:</h1>
+          <h1>Languages:</h1>
+        </div>
+        <div className="flex flex-row flex-wrap gap-2">
+          <TechBadge icon={<SiCsharp />} name="C#" />
+          <TechBadge icon={<SiTypescript />} name="TypeScript" />
+          <TechBadge icon={<IoLogoJavascript />} name="JavaScript" />
+          <TechBadge icon={<SiPostgresql />} name="PSQL" />
+          <TechBadge icon={<FaJava />} name="Java" />
+          <TechBadge icon={<SiGnubash />} name="Bash Scripting" />
+        </div>
+        <div className="px-2 pt-4">
+          <h1>Frameworks:</h1>
         </div>
         <div className="flex flex-row flex-wrap gap-2">
           <TechBadge icon={<FaReact />} name="React" />
-          <TechBadge icon={<SiTypescript />} name="TypeScript" />
-          <TechBadge icon={<IoLogoJavascript />} name="JavaScript" />
-          <TechBadge icon={<SiCsharp />} name="C#" />
-          <TechBadge icon={<FaJava />} name="Java" />
-          <TechBadge icon={<SiPostgresql />} name="PSQL" />
           <TechBadge icon={<RiTailwindCssFill />} name="TailWindCSS" />
-          <TechBadge icon={<SiJest />} name="Jest" />
           <TechBadge icon={<SiExpress />} name="ExpressJs" />
-          <TechBadge icon={<SiGnubash />} name="Bash Scripting" />
+          <TechBadge icon={<SiFastify />} name="Fastify" />
+          <TechBadge icon={<SiJest />} name="Jest" />
         </div>
-        <div className="px-2 pt-8">
+
+        <div className="px-2 pt-4">
+          <h1>Hosting:</h1>
+        </div>
+        <div className="flex flex-row flex-wrap gap-2">
+          <TechBadge icon={<SiRender />} name="Render" />
+          <TechBadge icon={<SiHeroku />} name="Heroku" />
+          <TechBadge icon={<SiSupabase />} name="SupaBase" />
+        </div>
+
+
+
+        <div className="px-2 pt-4">
           <h1>UI Libraries:</h1>
         </div>
         <div className="flex flex-row flex-wrap gap-2">
