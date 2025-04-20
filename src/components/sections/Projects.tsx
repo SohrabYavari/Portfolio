@@ -1,16 +1,17 @@
 import CardComp from "../global/CardComp";
 import ProjectCard from "../global/ProjectCard";
-import Jane from "../../assets/jane.jpg";
 import InvestIQ from "../../assets/InvestIQ.jpg";
 import Solar from "../../assets/Solar.jpg";
 import NcNews from "../../assets/nc-news.png";
 import NcNewsBackend from "../../assets/nc-news-backend.png";
+import RainCheckBackend from "../../assets/rain-check-be.png";
 import TechBadge from "../global/TechBadge";
 
 import { FaReact } from "react-icons/fa";
 import {
   SiAxios,
   SiExpress,
+  SiFastify,
   SiGithubactions,
   SiGithubpages,
   SiGnubash,
@@ -24,7 +25,6 @@ import {
 import { IoLogoJavascript } from "react-icons/io";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiDaisyui } from "react-icons/si";
-import { SiShadcnui } from "react-icons/si";
 import { SiMui } from "react-icons/si";
 
 const Projects = () => {
@@ -36,6 +36,24 @@ const Projects = () => {
         description="A showcase on the different projects that I have worked on."
       >
         <div className="flex flex-col gap-2">
+        <ProjectCard
+            image={RainCheckBackend}
+            webLink="https://rain-check-be.onrender.com/api"
+            gitLink="https://github.com/SohrabYavari/rain-check-be"
+            title="Rain Check Backend"
+            description="The backend built with RESTful API's for the Rain Check app, built in React Native."
+            techStack={
+              <>
+                <TechBadge icon={<SiTypescript />} name="TypeScript" />
+                <TechBadge icon={<SiFastify />} name="Fastify" />
+                <TechBadge icon={<SiPostgresql />} name="Postgresql" />
+                <TechBadge icon={<SiJest />} name="Jest" />
+                <TechBadge icon={<SiRender />} name="Render" />
+                <TechBadge icon={<SiSupabase />} name="Supabase" />
+              </>
+            }
+          />
+          
           <ProjectCard
             image={NcNewsBackend}
             webLink="https://nc-news-backend-769r.onrender.com/api"
@@ -91,21 +109,7 @@ const Projects = () => {
             }
           />
 
-          <ProjectCard
-            image={Jane}
-            webLink="https://SohrabYavari.github.io/janes-photography/"
-            gitLink="https://github.com/SohrabYavari/janes-photography"
-            title="Janes Photography"
-            description="A personal Portfolio for a wedding photographer."
-            techStack={
-              <>
-                <TechBadge icon={<FaReact />} name="React" />
-                <TechBadge icon={<SiTypescript />} name="TypeScript" />
-                <TechBadge icon={<RiTailwindCssFill />} name="TailWindCSS" />
-                <TechBadge icon={<SiShadcnui />} name="ShadcnUI" />
-              </>
-            }
-          />
+
 
           <ProjectCard
             image={Solar}
